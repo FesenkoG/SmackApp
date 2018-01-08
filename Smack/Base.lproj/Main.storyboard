@@ -269,7 +269,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saH-oD-rIn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saH-oD-rIn" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.089145131409168243" green="0.25012770295143127" blue="0.75008732080459595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -280,6 +280,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -388,9 +393,10 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="i5Y-7L-HV6" eventType="touchUpInside" id="7OR-Oy-0w6"/>
+                                    <action selector="pickAvatarPressed:" destination="JqB-iC-7Us" eventType="touchUpInside" id="dgh-Vn-2ct"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-7K-7xc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-7K-7xc" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.089145131409999995" green="0.25012770299999998" blue="0.75008732079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -401,6 +407,14 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="JqB-iC-7Us" eventType="touchUpInside" id="oQ2-ee-eop"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QD-0J-Xad">
                                 <rect key="frame" x="104" y="70" width="167" height="23"/>
@@ -423,6 +437,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="i5Y-7L-HV6" eventType="touchUpInside" id="Prb-39-U2V"/>
+                                    <action selector="pickBgColorPressed:" destination="JqB-iC-7Us" eventType="touchUpInside" id="vQT-ea-ytN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -447,6 +462,10 @@
                         <viewLayoutGuide key="safeArea" id="GJq-wJ-u1w"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="Mle-uQ-u4U" id="yeu-xT-gsd"/>
+                        <outlet property="passTxt" destination="1Rf-me-Vda" id="G41-Mq-wlo"/>
+                        <outlet property="userImg" destination="Yxy-eQ-Lge" id="Xwc-7a-4fE"/>
+                        <outlet property="usernameTxt" destination="gND-SN-cvE" id="K7D-Q0-FSe"/>
                         <segue destination="WJ5-fE-TtS" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="MtF-QQ-lTA"/>
                     </connections>
                 </viewController>
