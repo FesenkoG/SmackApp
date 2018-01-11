@@ -24,6 +24,7 @@
 		66A3AAAF200556A500853180 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3AAAE200556A500853180 /* UserDataService.swift */; };
 		66A3AAB1200762C000853180 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3AAB0200762C000853180 /* AvatarPickerVC.swift */; };
 		66A3AAB3200764CC00853180 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3AAB2200764CC00853180 /* AvatarCell.swift */; };
+		66A3AAB520078EEC00853180 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3AAB420078EEC00853180 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		66A3AAAE200556A500853180 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		66A3AAB0200762C000853180 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		66A3AAB2200764CC00853180 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		66A3AAB420078EEC00853180 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		869D9F9C343CCF8D18F1F2A4 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				6631F7422003697100A7F18C /* GradientView.swift */,
 				6631F74E2004083B00A7F18C /* RoundedButton.swift */,
 				66A3AAB2200764CC00853180 /* AvatarCell.swift */,
+				66A3AAB420078EEC00853180 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				6631F741200277F600A7F18C /* ChannelVC.swift in Sources */,
 				66A3AAB1200762C000853180 /* AvatarPickerVC.swift in Sources */,
 				6631F74F2004083B00A7F18C /* RoundedButton.swift in Sources */,
+				66A3AAB520078EEC00853180 /* CircleImage.swift in Sources */,
 				6631F73F200277E000A7F18C /* ChatVC.swift in Sources */,
 				66A3AAAF200556A500853180 /* UserDataService.swift in Sources */,
 				6631F74A2003CC6C00A7F18C /* CreateAccountVC.swift in Sources */,

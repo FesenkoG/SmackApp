@@ -112,7 +112,7 @@
                                 <rect key="frame" x="278" y="89" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kBt-du-Vd4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kBt-du-Vd4" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="1N4-4e-4OJ"/>
@@ -422,7 +422,7 @@
                                 <color key="textColor" red="0.089145131409999995" green="0.25012770299999998" blue="0.75008732079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Yxy-eQ-Lge">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Yxy-eQ-Lge" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137" y="289" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ER4-UV-TZf"/>
@@ -440,10 +440,15 @@
                                     <action selector="pickBgColorPressed:" destination="JqB-iC-7Us" eventType="touchUpInside" id="vQT-ea-ytN"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Z5U-PZ-ehn">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.28926009499999999" green="0.34519418169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2QD-0J-Xad" firstAttribute="top" secondItem="GJq-wJ-u1w" secondAttribute="top" constant="50" id="1Bj-QD-u6I"/>
+                            <constraint firstItem="Z5U-PZ-ehn" firstAttribute="centerX" secondItem="d7D-7I-s7Y" secondAttribute="centerX" id="3FJ-TG-DjY"/>
                             <constraint firstItem="zK1-UM-CR2" firstAttribute="centerX" secondItem="d7D-7I-s7Y" secondAttribute="centerX" id="5JC-M7-ha6"/>
                             <constraint firstItem="GJq-wJ-u1w" firstAttribute="bottom" secondItem="lmF-7K-7xc" secondAttribute="bottom" constant="20" id="9Vf-5G-RYo"/>
                             <constraint firstItem="Yxy-eQ-Lge" firstAttribute="top" secondItem="nUk-fx-krB" secondAttribute="bottom" constant="40" id="Dgn-pp-vWW"/>
@@ -455,6 +460,7 @@
                             <constraint firstItem="Ipz-4i-uFO" firstAttribute="centerX" secondItem="d7D-7I-s7Y" secondAttribute="centerX" id="WMP-6Z-lfm"/>
                             <constraint firstItem="nUk-fx-krB" firstAttribute="top" secondItem="2QD-0J-Xad" secondAttribute="bottom" constant="20" id="Ziy-Gf-Ulc"/>
                             <constraint firstItem="lmF-7K-7xc" firstAttribute="centerX" secondItem="d7D-7I-s7Y" secondAttribute="centerX" id="aMz-WY-aWL"/>
+                            <constraint firstItem="Z5U-PZ-ehn" firstAttribute="centerY" secondItem="d7D-7I-s7Y" secondAttribute="centerY" constant="-100" id="dDt-Uh-AYT"/>
                             <constraint firstItem="Ipz-4i-uFO" firstAttribute="width" secondItem="Yxy-eQ-Lge" secondAttribute="width" id="kkX-jd-AUW"/>
                             <constraint firstItem="zK1-UM-CR2" firstAttribute="top" secondItem="Ipz-4i-uFO" secondAttribute="bottom" constant="8" id="w9I-ka-Nff"/>
                             <constraint firstItem="nUk-fx-krB" firstAttribute="centerX" secondItem="d7D-7I-s7Y" secondAttribute="centerX" id="wRz-1h-JFs"/>
@@ -464,6 +470,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="Mle-uQ-u4U" id="yeu-xT-gsd"/>
                         <outlet property="passTxt" destination="1Rf-me-Vda" id="G41-Mq-wlo"/>
+                        <outlet property="spinner" destination="Z5U-PZ-ehn" id="fx8-WE-yEh"/>
                         <outlet property="userImg" destination="Yxy-eQ-Lge" id="Xwc-7a-4fE"/>
                         <outlet property="usernameTxt" destination="gND-SN-cvE" id="K7D-Q0-FSe"/>
                         <segue destination="WJ5-fE-TtS" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="MtF-QQ-lTA"/>
@@ -526,7 +533,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X1X-GJ-GpE">
-                                                    <rect key="frame" x="10" y="10" width="80" height="60"/>
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
