@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Smack/Controller/CreateAccountVC.swift"
-            timestampString = "537224545.2592109"
+            timestampString = "537358553.958204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "createAccountPressed(_:)"
             landmarkType = "7">
             <Locations>
